@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:moda_uygulama/detay.dart';
 
 void main() => runApp(ModaApp());
 
@@ -241,16 +242,26 @@ class cardComponent extends StatelessWidget {
             ),
             Row(
               children: [
-                Container(
-                  height: 200,
-                  width: (MediaQuery.of(context).size.width - 50) / 2,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      image: DecorationImage(
-                          image: AssetImage(
-                            "assets/images/modelgrid1.jpeg",
-                          ),
-                          fit: BoxFit.cover)),
+                InkWell(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) =>
+                            Detay(imgPath: 'assets/images/modelgrid1.jpeg')));
+                  },
+                  child: Hero(
+                    tag: 'assets/images/modelgrid1.jpeg',
+                    child: Container(
+                      height: 200,
+                      width: (MediaQuery.of(context).size.width - 50) / 2,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          image: DecorationImage(
+                              image: AssetImage(
+                                "assets/images/modelgrid1.jpeg",
+                              ),
+                              fit: BoxFit.cover)),
+                    ),
+                  ),
                 ),
                 SizedBox(
                   width: 10,
@@ -258,30 +269,50 @@ class cardComponent extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Container(
-                      height: 95,
-                      width: (MediaQuery.of(context).size.width - 100) / 2,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          image: DecorationImage(
-                              image: AssetImage(
-                                "assets/images/modelgrid2.jpeg",
-                              ),
-                              fit: BoxFit.cover)),
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => Detay(
+                                imgPath: 'assets/images/modelgrid2.jpeg')));
+                      },
+                      child: Hero(
+                        tag: 'assets/images/modelgrid2.jpeg',
+                        child: Container(
+                          height: 95,
+                          width: (MediaQuery.of(context).size.width - 100) / 2,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                    "assets/images/modelgrid2.jpeg",
+                                  ),
+                                  fit: BoxFit.cover)),
+                        ),
+                      ),
                     ),
                     SizedBox(
                       height: 10,
                     ),
-                    Container(
-                      height: 95,
-                      width: (MediaQuery.of(context).size.width - 100) / 2,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          image: DecorationImage(
-                              image: AssetImage(
-                                "assets/images/modelgrid3.jpeg",
-                              ),
-                              fit: BoxFit.cover)),
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => Detay(
+                                imgPath: 'assets/images/modelgrid3.jpeg')));
+                      },
+                      child: Hero(
+                        tag: 'assets/images/modelgrid3.jpeg',
+                        child: Container(
+                          height: 95,
+                          width: (MediaQuery.of(context).size.width - 100) / 2,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                    "assets/images/modelgrid3.jpeg",
+                                  ),
+                                  fit: BoxFit.cover)),
+                        ),
+                      ),
                     ),
                   ],
                 ),
