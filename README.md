@@ -1,4 +1,4 @@
-# moda_uygulama
+# Fashion App Example UI Template
 
 A new Flutter application.
 
